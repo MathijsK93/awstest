@@ -1,3 +1,5 @@
 #!/bin/bash
-yum install -y httpd
-
+yum -y groupinstall "Development Tools"
+# installing RBENV
+git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+cd ~/.rbenv && src/configure && make -C src
