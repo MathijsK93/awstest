@@ -15,18 +15,3 @@ hooks:
     - location: scripts/stop_server
       timeout: 300
       runas: root
-
-
-files:
-  - source: /
-    destination: <the directory your code will live>
-permissions:
-  - object: <the directory your code will live>
-    owner: <user who will deploy your code>
-    group: <group that user lives in>
-  AfterInstall:
-    - location: script/AfterInstall.sh
-      runas: <user who will deploy your code>
-  ApplicationStart:
-    - location: script/ApplicationStart.sh
-      runas: <root user>
