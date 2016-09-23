@@ -1,19 +1,21 @@
 version: 0.0
 os: linux
 files:
-  - source: /index.html
+  - source: /
     destination: /var/www/
 hooks:
   BeforeInstall:
-  BeforeInstall:
-    # - location: scripts/deregister_from_elb
-    #   timeout: 400
+    - location: scripts/deregister_from_elb
+      timeout: 400
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
     - location: scripts/start_server
       timeout: 300
       runas: root
+  ApplicationStart:
+    - location: scripts/register_with_elb.sh
+      timeout: 120
   ApplicationStop:
     - location: scripts/stop_server
       timeout: 300
