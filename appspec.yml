@@ -6,8 +6,8 @@ files:
 hooks:
   BeforeInstall:
   BeforeInstall:
-    - location: scripts/deregister_from_elb
-      timeout: 400
+    # - location: scripts/deregister_from_elb
+    #   timeout: 400
     - location: scripts/install_dependencies
       timeout: 300
       runas: root
