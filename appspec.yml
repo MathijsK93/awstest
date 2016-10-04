@@ -3,6 +3,10 @@ os: linux
 files:
   - source: ./
     destination: /webapps/rails
+permissions:
+  - object: /webapps/rails
+    owner: ubuntu
+    group: ubuntu   
 hooks:
   ApplicationStart:
     - location: scripts/start_server
