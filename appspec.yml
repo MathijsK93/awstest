@@ -9,15 +9,15 @@ permissions:
     group: ubuntu
     type:
       - directory
-hooks:
-  ApplicationStart:
-    - location: scripts/start_server
-      timeout: 300
-      runas: ubuntu
-  AfterInstall:
-    - location: scripts/AfterInstall.sh
-      runas: ubuntu
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: ubuntu
+# hooks:
+  # ApplicationStart:
+  #   - location: scripts/start_server
+  #     timeout: 300
+  #     runas: ubuntu
+  # AfterInstall:
+  #   - location: scripts/AfterInstall.sh
+  #     runas: ubuntu
+  # ApplicationStop:
+  #   - location: scripts/stop_server
+  #     timeout: 300
+  #     runas: ubuntu
