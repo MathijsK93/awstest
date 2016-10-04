@@ -8,12 +8,12 @@ permissions:
     owner: ubuntu
     group: ubuntu
     type:
-      - directory    
+      - directory
 hooks:
   ApplicationStart:
     - location: scripts/start_server
       timeout: 300
-      runas: root
+      runas: ubuntu
   AfterInstall:
     - location: scripts/AfterInstall.sh
       runas: ubuntu
