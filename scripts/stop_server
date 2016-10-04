@@ -3,4 +3,5 @@
 # if [[ -n  $isExistApp ]]; then
 #     service httpd stop
 # fi
-service nginx stop
+# service nginx stop
+rbenv sudo passenger stop -p80
